@@ -1,7 +1,7 @@
 (executables
-  (public_names day_1 day_2)
- (names day_1 day_2)
- (libraries base stdio)
+  (public_names day_1 day_2 day_3)
+ (names day_1 day_2 day_3)
+ (libraries base stdio re)
  (preprocess (pps ppx_deriving.show))
-(flags :standard -w -33)
+(flags :standard -w -33 -w -32)
  )
