@@ -1,6 +1,9 @@
 open Base
 open Stdio
 
+let ( % ) f g x = f (g x)
+let uncurry f (x, y) = f x y
+
 let read_file filename =
   In_channel.with_file filename ~f:(fun ic ->
       In_channel.fold_lines ic ~init:[] ~f:(fun acc line -> line :: acc)
